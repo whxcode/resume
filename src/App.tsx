@@ -1,35 +1,27 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import "@mantine/core/styles.css";
+
+import { createTheme, MantineProvider, Tabs } from "@mantine/core";
+import Page1 from "./pages/Page1";
+
+const theme = createTheme({
+  /** Put your mantine theme override here */
+});
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <MantineProvider theme={theme}>
+      <Tabs defaultValue="page-1">
+        <Tabs.List>
+          <Tabs.Tab value="page-1">模版1</Tabs.Tab>
+          <Tabs.Tab value="page-2">模版2</Tabs.Tab>
+        </Tabs.List>
+
+        <Tabs.Panel value="page-1">
+          <Page1 />
+        </Tabs.Panel>
+      </Tabs>
+    </MantineProvider>
+  );
 }
 
-export default App
+export default App;
