@@ -1,25 +1,54 @@
 import "@mantine/core/styles.css";
 
-import { createTheme, MantineProvider, Tabs } from "@mantine/core";
+import {
+  createTheme,
+  Flex,
+  MantineProvider,
+  Tabs,
+  Button,
+} from "@mantine/core";
 import Page1 from "./pages/Page1";
+import {} from "@mantine/hooks";
+import { useState } from "react";
 
 const theme = createTheme({
   /** Put your mantine theme override here */
 });
 
 function App() {
+  const [visible, setVisible] = useState(true);
   return (
     <MantineProvider theme={theme}>
-      <Tabs defaultValue="page-1">
-        <Tabs.List>
-          <Tabs.Tab value="page-1">模版1</Tabs.Tab>
-          <Tabs.Tab value="page-2">模版2</Tabs.Tab>
-        </Tabs.List>
+      <Flex justify="space-between">
+        <Tabs defaultValue="page-1">
+          {visible && (
+            <Tabs.List>
+              <Tabs.Tab value="page-1">模版1</Tabs.Tab>
+              <Tabs.Tab value="page-2">模版2</Tabs.Tab>
+            </Tabs.List>
+          )}
 
-        <Tabs.Panel value="page-1">
-          <Page1 />
-        </Tabs.Panel>
-      </Tabs>
+          <Tabs.Panel value="page-1">
+            <Page1 />
+          </Tabs.Panel>
+        </Tabs>
+        {visible && (
+          <Button
+            variant="private"
+            onClick={() => {
+              setVisible(false);
+              setTimeout(() => {
+                window.print();
+                setTimeout(() => {
+                  setVisible(true);
+                }, 100);
+              }, 1000);
+            }}
+          >
+            打印
+          </Button>
+        )}
+      </Flex>
     </MantineProvider>
   );
 }
