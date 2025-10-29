@@ -46,7 +46,7 @@ function Page1() {
             <Flex justify="space-between">
               <Flex>
                 <Title style={{ width: 280 }} order={5}>
-                  成都摹客科技有限公司{" "}
+                  成都摹客科技有限公司
                 </Title>
                 <Text flex={1} size="md">
                   前端开发工程师
@@ -95,7 +95,13 @@ function Page1() {
         <Flex direction="column" gap={10}>
           <Flex justify="space-between">
             <Flex>
-              <Title style={{ width: 280 }} order={5}>
+              <Title
+                style={{ width: 280 }}
+                order={5}
+                onClick={() => {
+                  window.open("https://www.mockplus.cn/m3");
+                }}
+              >
                 摹客DT(UI 设计工具)
               </Title>
               <Text flex={1} size="md">
