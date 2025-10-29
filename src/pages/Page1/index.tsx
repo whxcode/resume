@@ -1,13 +1,24 @@
-import { Text, Flex, Title } from "@mantine/core";
+import { Text, Flex, Title, Center } from "@mantine/core";
 import root from "./index.module.scss";
 import { Divider } from "../../components";
 
 function Page1() {
   return (
     <Flex className={root.container} direction="column" gap={16}>
-      <Flex>
-        王恒兴 男 | 年龄：24岁 | 17345241280 | 35129760@qq.com 3年工作经验 |
-        求职意向：前端开发工程师 | 期望城市：成都
+      <Flex direction="column">
+        <Center>
+          <Title order={2}>王恒兴</Title>
+        </Center>
+        <Center>
+          <Text size="md">
+            王恒兴 男 | 年龄：24岁 | 17345241280 | 35129760@qq.com
+          </Text>
+        </Center>
+        <Center>
+          <Text size="md">
+            3年工作经验 | 求职意向：前端开发工程师 | 期望城市：成都
+          </Text>
+        </Center>
       </Flex>
 
       <Flex direction="column" gap={10}>
