@@ -8,7 +8,7 @@ import {
   Button,
 } from "@mantine/core";
 import Page1 from "./pages/Page1";
-import {} from "@mantine/hooks";
+import Page2 from "./pages/Page2";
 import { useState } from "react";
 
 const theme = createTheme({
@@ -21,7 +21,7 @@ function App() {
   return (
     <MantineProvider defaultColorScheme="light" theme={theme}>
       <Flex justify="center">
-        <Tabs defaultValue="page-1">
+        <Tabs defaultValue="page-2">
           {visible && (
             <Tabs.List>
               <Tabs.Tab value="page-1">模版1</Tabs.Tab>
@@ -31,6 +31,10 @@ function App() {
 
           <Tabs.Panel value="page-1">
             <Page1 />
+          </Tabs.Panel>
+
+          <Tabs.Panel value="page-2">
+            <Page2 />
           </Tabs.Panel>
         </Tabs>
         {visible && (

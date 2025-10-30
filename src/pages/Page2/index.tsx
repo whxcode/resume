@@ -2,7 +2,7 @@ import { Text, Flex, Title, Center, Space } from "@mantine/core";
 import root from "./index.module.scss";
 import { Divider, Icon, Link } from "../../components";
 
-function Page1() {
+function Page2() {
   return (
     <Flex className={root.container} direction="column" gap={16}>
       <Flex direction="column">
@@ -94,7 +94,7 @@ function Page1() {
       <Flex direction="column" gap={10}>
         <Divider text="工作经历" />
 
-        <Flex direction="column" gap={16}>
+        <Flex direction="column" gap={20}>
           <Flex direction="column" gap={10}>
             <Flex justify="space-between">
               <Flex>
@@ -143,7 +143,7 @@ function Page1() {
         </Flex>
       </Flex>
 
-      <Flex direction="column" gap={10}>
+      <Flex direction="column" gap={16}>
         <Divider text="项目经历" />
 
         <Flex direction="column" gap={10}>
@@ -152,11 +152,11 @@ function Page1() {
               <Link href="https://www.mockplus.cn/m3">
                 <Icon type="link"></Icon>
                 <Title order={5}>
-                  摹客M3(UI&原型设计工具) https://www.mockplus.cn/m3
+                  一、摹客M3(工具不混用，设计更顺手) https://www.mockplus.cn/m3
                 </Title>
               </Link>
             </Flex>
-            <Text size="md"> 2021.03-至今</Text>
+            <Text size="md"> 2024-至今</Text>
           </Flex>
 
           <Flex direction="column" gap={8}>
@@ -184,7 +184,7 @@ function Page1() {
                   3、解析第三方设计工具的源文件（sketch、xd、figma)。
                 </Text>
                 <Text size="md">
-                  4、封装常用 UI 组件(Menu、Tree、Notice等)。
+                  4、封装常用 UI 组件(Menu、Tree、Notice等) 。
                 </Text>
 
                 <Text size="md">
@@ -201,6 +201,137 @@ function Page1() {
                 <Text size="md">
                   8、
                   完善编辑器内图层操作（创建、删除、对齐、克隆、选择等核心功能）。
+                </Text>
+              </Flex>
+            </Flex>
+          </Flex>
+        </Flex>
+
+        <Flex direction="column" gap={10}>
+          <Flex justify="space-between">
+            <Flex>
+              <Link href="https://www.fluig.cn/">
+                <Icon type="link"></Icon>
+                <Title order={5}>
+                  二、摹客 FG（让AI更懂你，让图表更有用） https://www.fluig.cn
+                </Title>
+              </Link>
+            </Flex>
+            <Text size="md"> 2024-至今</Text>
+          </Flex>
+
+          <Flex direction="column" gap={8}>
+            <Flex direction="column" gap={6}>
+              <Title style={{ width: 280 }} order={6}>
+                内容:
+              </Title>
+
+              <Text size="md">
+                畅图是一款AI原生图表工具，无需绘图经验，上传文档，或与AI对话，即可生成思维导图、流程图、表格、看板等。
+                立即免费使用，助你从想法到落地更高效。
+              </Text>
+            </Flex>
+
+            <Flex direction="column" gap={0}>
+              <Title style={{ width: 280 }} order={6}>
+                核心贡献：
+              </Title>
+              <Flex direction="column" gap={6}>
+                <Text size="md">
+                  1、 依托 M3
+                  同一套代码与数据结构，无需重构底层逻辑，仅新增白板专属交互（如画笔标注、思维导图节点编辑），高效实现产品形态差异化，保障与
+                  M3 的技术一致性和维护效率。
+                </Text>
+              </Flex>
+            </Flex>
+          </Flex>
+        </Flex>
+
+        <Flex direction="column" gap={10}>
+          <Flex justify="space-between">
+            <Flex>
+              <Link href="https://www.mockplus.cn/m3/offline">
+                <Icon type="link"></Icon>
+                <Title order={5}>
+                  三、 摹客 M3 离线版（多系统本地部署型设计工具）
+                  https://www.mockplus.cn/m3/offline
+                </Title>
+              </Link>
+            </Flex>
+            <Text size="md"> 2024-至今</Text>
+          </Flex>
+
+          <Flex direction="column" gap={8}>
+            <Flex direction="column" gap={6}>
+              <Title style={{ width: 280 }} order={6}>
+                内容:
+              </Title>
+
+              <Text size="md">
+                行业独家离线产品设计工具，更安全的选择
+                可100%离线客户端使用，集原型设计、UI
+                设计于一体，功能强大，高保密级别，数据更安全。可同时适配
+                Linux、Mac、Windows。
+              </Text>
+            </Flex>
+
+            <Flex direction="column" gap={0}>
+              <Title style={{ width: 280 }} order={6}>
+                核心贡献：
+              </Title>
+              <Flex direction="column" gap={6}>
+                <Text size="md">
+                  1、负责 Electron
+                  桌面端架构搭建，实现窗口管理、本地资源访问等基础功能，保障离线版与在线版
+                  PC 端界面操作一致性。
+                </Text>
+                <Text size="md">
+                  2、基于 Koa
+                  框架开发本地后端服务，设计数据本地存储方案（如用户设计文件、配置信息本地持久化），确保无网络时工具正常运行。
+                </Text>
+              </Flex>
+            </Flex>
+          </Flex>
+        </Flex>
+
+        <Flex direction="column" gap={10}>
+          <Flex justify="space-between">
+            <Flex>
+              <Link href="https://www.mockplus.cn/dt">
+                <Icon type="link"></Icon>
+                <Title order={5}>
+                  四、摹客 DT（UI 设计工具）https://www.mockplus.cn/dt
+                </Title>
+              </Link>
+            </Flex>
+            <Text size="md"> 2021-至今</Text>
+          </Flex>
+
+          <Flex direction="column" gap={8}>
+            <Flex direction="column" gap={6}>
+              <Title style={{ width: 280 }} order={6}>
+                内容:
+              </Title>
+
+              <Text size="md">
+                改变传统设计流程，降低成本，提升效率 UI设计师都爱用。
+              </Text>
+            </Flex>
+
+            <Flex direction="column" gap={0}>
+              <Title style={{ width: 280 }} order={6}>
+                核心贡献：
+              </Title>
+              <Flex direction="column" gap={6}>
+                <Text size="md">
+                  1、负责工具核心交互模块开发，实现组件拖拽、属性实时同步等功能，提升设计师操作流畅度。
+                </Text>
+                <Text size="md">
+                  2、基于 React Hooks
+                  封装通用业务组件（如属性面板、图层列表），减少重复代码，降低后续维护成本。
+                </Text>
+                <Text size="md">
+                  3、针对图层数量过多导致的页面卡顿问题，采用虚拟列表优化大量列表渲染场景的性能，改善页面加载体验。
                 </Text>
               </Flex>
             </Flex>
@@ -224,7 +355,6 @@ function Page1() {
               </Text>
             </Flex>
           </Flex>
-          <Text size="md"> 2021.03-至今</Text>
         </Flex>
       </Flex>
 
@@ -242,4 +372,4 @@ function Page1() {
   );
 }
 
-export default Page1;
+export default Page2;
