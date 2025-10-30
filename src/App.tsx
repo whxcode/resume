@@ -12,14 +12,15 @@ import {} from "@mantine/hooks";
 import { useState } from "react";
 
 const theme = createTheme({
+  primaryShade: { light: 6, dark: 7 },
   /** Put your mantine theme override here */
 });
 
 function App() {
   const [visible, setVisible] = useState(true);
   return (
-    <MantineProvider theme={theme}>
-      <Flex justify="space-between">
+    <MantineProvider defaultColorScheme="light" theme={theme}>
+      <Flex justify="center">
         <Tabs defaultValue="page-1">
           {visible && (
             <Tabs.List>
@@ -34,6 +35,7 @@ function App() {
         </Tabs>
         {visible && (
           <Button
+            size="xs"
             variant="private"
             onClick={() => {
               setVisible(false);

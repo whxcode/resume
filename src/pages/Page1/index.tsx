@@ -1,22 +1,74 @@
-import { Text, Flex, Title, Center } from "@mantine/core";
+import { Text, Flex, Title, Center, Space } from "@mantine/core";
 import root from "./index.module.scss";
-import { Divider } from "../../components";
+import { Divider, Icon, Link } from "../../components";
 
 function Page1() {
   return (
     <Flex className={root.container} direction="column" gap={16}>
       <Flex direction="column">
         <Center>
-          <Title order={2}>王恒兴</Title>
+          <Title order={4}>王恒兴</Title>
         </Center>
         <Center>
-          <Text size="md">
-            王恒兴 男 | 年龄：24岁 | 17345241280 | 35129760@qq.com
+          <Text
+            size="md"
+            style={{
+              verticalAlign: "center",
+              display: "flex",
+              alignItems: "center",
+            }}
+          >
+            王恒兴 男<Space w="xs" />|<Space w="xs" />
+            年龄：24岁
+            <Space w="xs" />|<Space w="xs" />
+            <Link
+              onClick={() => {
+                window.location.href = "tel:+17345241280";
+              }}
+            >
+              <Icon type="phone"></Icon>
+              17345241280
+            </Link>
+            <Space w="xs" />|<Space w="xs" />
+            <Link
+              onClick={() => {
+                const to = "35129760@qq.com"; // 多个收件人用逗号分隔: 'a@example.com,b@example.com'
+                const cc = "";
+                const bcc = "";
+                const subject = "[公司名称]-面试邀请：前端工程师";
+                const body = `您好，现邀请您面试前端工程师职位。烦请告知近期方便的时间，联系电话：[0000-0000]，感谢配合，静候回复！`; // 换行会被 encodeURIComponent 编码为 %0A
+
+                const params = new URLSearchParams({
+                  subject: subject,
+                  body: body,
+                  cc: cc,
+                  bcc: bcc,
+                });
+
+                const mailto = `mailto:${encodeURIComponent(to)}?${params.toString()}`;
+                // 使用 location.href 或 window.open 都可
+                window.location.href = mailto;
+              }}
+            >
+              <Icon type="email"></Icon>
+              35129760@qq.com
+            </Link>
           </Text>
         </Center>
         <Center>
-          <Text size="md">
-            3年工作经验 | 求职意向：前端开发工程师 | 期望城市：成都
+          <Text
+            size="md"
+            style={{
+              verticalAlign: "center",
+              display: "flex",
+              alignItems: "center",
+            }}
+          >
+            3年工作经验
+            <Space w="xs" />|<Space w="xs" />
+            求职意向：前端开发工程师
+            <Space w="xs" />|<Space w="xs" />
+            期望城市：成都
           </Text>
         </Center>
       </Flex>
@@ -26,14 +78,19 @@ function Page1() {
 
         <Flex direction="column" gap={0}>
           <Text size="md">
-            1、熟悉原生 javascript、css ；熟悉常用的设计模式。
+            1、熟练掌握 JavaScript 与
+            CSS，理解常用设计模式，能分析常见算法的时间复杂度。
           </Text>
           <Text size="md">
-            2、擅长 react、vue、nginx、typescript 、移动端、性能调优。
+            2、熟练掌握
+            React、Vue、TypeScript、Electron，等移动端开发与前端性能调优，解决性能问题。
           </Text>
-          <Text size="md">3、了解 node、go 能独立完成服务端开发。</Text>
           <Text size="md">
-            4、热爱学习新的技术，责任心极强，为人诚实正直，作风正派。
+            3、了解 Node.js、Nginx、Go，可独立完成服务端开发；掌握 C++，能进行
+            WebAssembly开发。
+          </Text>
+          <Text size="md">
+            4、保持对新技术的学习热情，具备极强的责任心，为人诚实正直，工作作风严谨正派。
           </Text>
         </Flex>
       </Flex>
@@ -46,7 +103,7 @@ function Page1() {
             <Flex justify="space-between">
               <Flex>
                 <Title style={{ width: 280 }} order={5}>
-                  成都摹客科技有限公司{" "}
+                  成都摹客科技有限公司
                 </Title>
                 <Text flex={1} size="md">
                   前端开发工程师
@@ -57,13 +114,14 @@ function Page1() {
 
             <Flex direction="column" gap={0}>
               <Text size="md">
-                负责公司核心产品 DT 的开发与维护(技术栈为 React+TypeScript)
+                负责公司核心产品 DT、M3、FG 的开发与维护(技术栈为
+                React、TypeScript、C++、Electron)。
               </Text>
               <Text size="md">
-                1. 维护已有产品功能，（优化性能，代码质量，功能用户体验等等);
+                1、 维护已有产品功能（优化性能、代码质量、功能用户体验等）。
               </Text>
               <Text size="md">
-                2. 根据产品规划的新功能需求，保证月计划保质保量完成;
+                2、根据产品规划的新功能需求，保证月计划保质保量完成。
               </Text>
             </Flex>
           </Flex>
@@ -95,9 +153,12 @@ function Page1() {
         <Flex direction="column" gap={10}>
           <Flex justify="space-between">
             <Flex>
-              <Title style={{ width: 280 }} order={5}>
-                摹客DT(UI 设计工具)
-              </Title>
+              <Link href="https://www.mockplus.cn/m3">
+                <Icon type="link"></Icon>
+                <Title style={{ width: 280 }} order={5}>
+                  摹客M3(UI&原型设计工具)
+                </Title>
+              </Link>
               <Text flex={1} size="md">
                 前端开发
               </Text>
@@ -113,7 +174,7 @@ function Page1() {
 
               <Text size="md">
                 为设计师提供的 UI
-                设计工具，支持矢量设计、实时协同、资源复用、快速编辑、历史模式。
+                设计工具，支持矢量设计、实时协同、资源复用、快速编辑、历史模式、离线版。
               </Text>
             </Flex>
 
@@ -122,11 +183,13 @@ function Page1() {
                 业绩:
               </Title>
               <Flex direction="column" gap={6}>
-                <Text size="md">1、优化组件侦测对齐功能。</Text>
-
-                <Text size="md">2、完成工作区缩放、拖动等功能。</Text>
-                <Text size="md">3、解析第三方设计工具的源文件（sketch)。</Text>
-
+                <Text size="md">1、开发图层侦测对齐功能。</Text>
+                <Text size="md">
+                  2、完成工作区/图层缩放、拖动、旋转等功能。
+                </Text>
+                <Text size="md">
+                  3、解析第三方设计工具的源文件（sketch、xd、figma)。
+                </Text>
                 <Text size="md">
                   4、封装常用 UI 组件(Menu、Tree、Notice等)。
                 </Text>
@@ -140,11 +203,11 @@ function Page1() {
                 </Text>
 
                 <Text size="md">
-                  7、 优化使用操作体验(避免用户使用一个功能需要多次点击按钮)。
+                  7、 优化使用操作体验、减少用户使用的时间成本。
                 </Text>
                 <Text size="md">
                   8、
-                  完善编辑器内图层操作（创建、删除、对齐、克隆、选择等其它操作）。
+                  完善编辑器内图层操作（创建、删除、对齐、克隆、选择等核心功能）。
                 </Text>
               </Flex>
             </Flex>
@@ -161,10 +224,9 @@ function Page1() {
               四川信息职业技术学院
             </Title>
             <Flex gap={40}>
-              <Text flex={1} size="md">
+              <Text flex={1} size="md" style={{ display: "flex" }}>
                 大专
-              </Text>
-              <Text flex={2} size="md">
+                <Space w="xs" />|<Space w="xs" />
                 软件工程
               </Text>
             </Flex>
@@ -177,15 +239,10 @@ function Page1() {
         <Divider text="社交主页" />
 
         <Flex justify="space-between">
-          <Text
-            style={{ cursor: "pointer" }}
-            size="md"
-            onClick={() => {
-              window.open("https://github.com/whxcode");
-            }}
-          >
-            https://github.com/whxcode
-          </Text>
+          <Link href="https://github.com/whxcode">
+            <Icon type="github" />
+            <Text size="md">Github</Text>
+          </Link>
         </Flex>
       </Flex>
     </Flex>
