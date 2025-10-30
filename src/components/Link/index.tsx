@@ -1,35 +1,31 @@
 import { Flex } from "@mantine/core";
 import { PropsWithChildren } from "react";
 
+type F = () => string;
 export const Link = ({
   href,
-  onClick,
   children,
+  target = "_blank",
 }: PropsWithChildren<{
-  href?: string;
-  onClick?: React.MouseEventHandler;
+  href: string | F;
+  target?: "_blank" | "_self";
 }>) => {
-  const handleClick = (e: React.MouseEvent) => {
-    if (onClick) {
-      onClick?.(e);
-      return;
-    }
-
-    window.open(href);
-  };
+  const link = typeof href === "string" ? href : href();
 
   return (
-    <Flex
-      style={{
-        cursor: "pointer",
-        color: "var(--mantine-color-blue-text)",
-      }}
-      onClick={handleClick}
-      title={href}
-      align="center"
-      gap={2}
-    >
-      {children}
-    </Flex>
+    <a target={target} href={link}>
+      <Flex
+        style={{
+          cursor: "pointer",
+          color: "var(--mantine-color-blue-text)",
+        }}
+        // onClick={handleClick}
+        title={link}
+        align="center"
+        gap={2}
+      >
+        {children}
+      </Flex>
+    </a>
   );
 };

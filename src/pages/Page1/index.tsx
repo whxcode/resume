@@ -21,17 +21,13 @@ function Page1() {
             王恒兴 男<Space w="xs" />|<Space w="xs" />
             年龄：24岁
             <Space w="xs" />|<Space w="xs" />
-            <Link
-              onClick={() => {
-                window.location.href = "tel:+17345241280";
-              }}
-            >
+            <Link href="tel:17345241280">
               <Icon type="phone"></Icon>
               17345241280
             </Link>
             <Space w="xs" />|<Space w="xs" />
             <Link
-              onClick={() => {
+              href={() => {
                 const to = "35129760@qq.com"; // 多个收件人用逗号分隔: 'a@example.com,b@example.com'
                 const cc = "";
                 const bcc = "";
@@ -47,7 +43,7 @@ function Page1() {
 
                 const mailto = `mailto:${encodeURIComponent(to)}?${params.toString()}`;
                 // 使用 location.href 或 window.open 都可
-                window.location.href = mailto;
+                return mailto;
               }}
             >
               <Icon type="email"></Icon>
@@ -155,13 +151,10 @@ function Page1() {
             <Flex>
               <Link href="https://www.mockplus.cn/m3">
                 <Icon type="link"></Icon>
-                <Title style={{ width: 280 }} order={5}>
-                  摹客M3(UI&原型设计工具)
+                <Title order={5}>
+                  摹客M3(UI&原型设计工具) https://www.mockplus.cn/m3
                 </Title>
               </Link>
-              <Text flex={1} size="md">
-                前端开发
-              </Text>
             </Flex>
             <Text size="md"> 2021.03-至今</Text>
           </Flex>
@@ -241,7 +234,7 @@ function Page1() {
         <Flex justify="space-between">
           <Link href="https://github.com/whxcode">
             <Icon type="github" />
-            <Text size="md">Github</Text>
+            <Text size="md">Github https://github.com/whxcode</Text>
           </Link>
         </Flex>
       </Flex>
