@@ -19,7 +19,7 @@ function Page2() {
             }}
           >
             王恒兴 男<Space w="xs" />|<Space w="xs" />
-            年龄：24岁
+            年龄：27岁
             <Space w="xs" />|<Space w="xs" />
             <Link href="tel:17345241280">
               <Icon type="phone"></Icon>
@@ -60,7 +60,7 @@ function Page2() {
               alignItems: "center",
             }}
           >
-            3年工作经验
+            6 年工作经验
             <Space w="xs" />|<Space w="xs" />
             求职意向：前端开发工程师
             <Space w="xs" />|<Space w="xs" />
@@ -253,8 +253,7 @@ function Page2() {
               <Link href="https://www.mockplus.cn/m3/offline">
                 <Icon type="link"></Icon>
                 <Title order={5}>
-                  三、 摹客 M3 离线版（多系统本地部署型设计工具）
-                  https://www.mockplus.cn/m3/offline
+                  三、 摹客 M3 离线版 https://www.mockplus.cn/m3/offline
                 </Title>
               </Link>
             </Flex>
