@@ -16,6 +16,7 @@ const JobHistory = [
     companyName: "成都摹客科技有限公司",
     position: "前端开发工程师",
     workDate: "2021.03-至今",
+    flex: 4,
     summary:
       " 负责公司核心产品 DT、M3、FG 的开发与维护(技术栈为 React、TypeScript、C++、Electron)。 ",
     features: [
@@ -27,6 +28,7 @@ const JobHistory = [
   {
     companyName: "成都数游方舟科技有限公司",
     position: "前端开发工程师",
+    flex: 3,
     workDate: "2019.11-2021.02",
     summary: "",
     features: [
@@ -34,6 +36,23 @@ const JobHistory = [
       "2、维护 pc 端后台管理系统。",
     ],
   },
+];
+
+const Tools = [
+  { label: "JavaScript", color: "red" },
+  { label: "TypeScript", color: "red" },
+  { label: "Vue" },
+  { label: "React", color: "red" },
+  { label: "HTML5" },
+  { label: "CSS3" },
+  { label: "Sass" },
+  { label: "Electron" },
+  { label: "uni-app" },
+  { label: "C/C++", color: "red" },
+  { label: "Go" },
+  { label: "Koa" },
+  { label: "Webpack" },
+  { label: "Vite" },
 ];
 
 function Page2() {
@@ -104,25 +123,15 @@ function Page2() {
 
             <Card.Section inheritPadding py="xs">
               <Flex align="center" gap={8} style={{ flexWrap: "wrap" }}>
-                {[
-                  "JavaScript",
-                  "TypeScript",
-                  "Vue",
-                  "React",
-                  "HTML5",
-                  "CSS3",
-                  "Sass",
-                  "Electron",
-                  "uni-app",
-                  "C/C++",
-                  "Go",
-                  "Koa",
-                  "Webpack",
-                  "Vite",
-                ].map((item) => {
+                {Tools.map(({ label, color }) => {
                   return (
-                    <Badge tt="none" variant="outline" color="blue">
-                      {item}
+                    <Badge
+                      key={label}
+                      tt="none"
+                      variant="outline"
+                      color={color ?? "blue"}
+                    >
+                      {label}
                     </Badge>
                   );
                 })}
@@ -180,36 +189,37 @@ function Page2() {
               >
                 {JobHistory.map((item) => {
                   return (
-                    <Card
+                    <Indicator
                       withBorder
-                      flex={4}
-                      shadow="sm"
-                      radius="md"
+                      position="top-start"
+                      flex={item.flex}
                       key={item.companyName}
                     >
-                      <Card.Section withBorder inheritPadding py="xs">
-                        <Text size="sm" fw={500}>
-                          {item.companyName}
-                        </Text>
-                        <Flex justify="space-between">
-                          <Text size="sm">{item.position}</Text>
-                          <Text size="sm">{item.workDate}</Text>
-                        </Flex>
-                      </Card.Section>
+                      <Card withBorder shadow="sm" radius="md">
+                        <Card.Section withBorder inheritPadding py="xs">
+                          <Text size="sm" fw={500}>
+                            {item.companyName}
+                          </Text>
+                          <Flex justify="space-between">
+                            <Text size="sm">{item.position}</Text>
+                            <Text size="sm">{item.workDate}</Text>
+                          </Flex>
+                        </Card.Section>
 
-                      <Card.Section inheritPadding py="xs">
-                        <Flex direction="column" gap={0}>
-                          <Text size="xs">{item.summary}</Text>
-                          {item.features.map((item) => {
-                            return (
-                              <Text size="xs" key={item}>
-                                {item}
-                              </Text>
-                            );
-                          })}
-                        </Flex>
-                      </Card.Section>
-                    </Card>
+                        <Card.Section inheritPadding py="xs">
+                          <Flex direction="column" gap={0}>
+                            <Text size="xs">{item.summary}</Text>
+                            {item.features.map((item) => {
+                              return (
+                                <Text size="xs" key={item}>
+                                  {item}
+                                </Text>
+                              );
+                            })}
+                          </Flex>
+                        </Card.Section>
+                      </Card>
+                    </Indicator>
                   );
                 })}
               </Card.Section>
