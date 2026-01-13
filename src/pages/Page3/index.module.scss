@@ -1,0 +1,13 @@
+.container {
+  background: #fff;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.divider {
+  span {
+    color: var(--mantine-color-text);
+    font-size: 20px;
+    font-size: var(--mantine-font-size-lg);
+  }
+}
