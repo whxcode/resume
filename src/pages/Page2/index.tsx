@@ -82,11 +82,19 @@ function Page2() {
             React、Vue、TypeScript、Electron，等移动端开发与前端性能调优，解决性能问题。
           </Text>
           <Text size="md">
-            3、了解 Node.js、Nginx、Go，可独立完成服务端开发；掌握 C++，能进行
+            3、渲染基础：了解 Canvas 2D、二维线性代数与仿射变换基础。
+          </Text>
+          <Text size="md">4、会使用webpack、vite等打包工具。</Text>
+          <Text size="md">
+            5、了解 Node.js、Nginx、Go，可独立完成服务端开发；掌握 C++，能进行
             WebAssembly开发。
           </Text>
           <Text size="md">
-            4、保持对新技术的学习热情，具备极强的责任心，为人诚实正直，工作作风严谨正派。
+            6、保持对新技术的学习热情，具备极强的责任心，为人诚实正直，工作作风严谨正派。
+          </Text>
+          <Text size="md">
+            7、熟练使用 AI
+            工具与提示词提示升开发效率（需求拆解、代码生成、调试辅助、文档/方案整理）。
           </Text>
         </Flex>
       </Flex>
@@ -111,7 +119,7 @@ function Page2() {
             <Flex direction="column" gap={0}>
               <Text size="md">
                 负责公司核心产品 DT、M3、FG 的开发与维护(技术栈为
-                React、TypeScript、C++、Electron)。
+                React、TypeScript、C++、Electron、Vite、Git)。
               </Text>
               <Text size="md">
                 1、 维护已有产品功能（优化性能、代码质量、功能用户体验等）。
@@ -119,6 +127,8 @@ function Page2() {
               <Text size="md">
                 2、根据产品规划的新功能需求，保证月计划保质保量完成。
               </Text>
+
+              <Text size="md">3、代码审查与规范治理。</Text>
             </Flex>
           </Flex>
 
@@ -136,6 +146,10 @@ function Page2() {
             </Flex>
 
             <Flex direction="column" gap={0}>
+              <Text size="md">
+                负责公司前端产品开发与维护(技术栈为
+                Javascript、Vue、Uni-app、H5、Git、小程序、公众号)。
+              </Text>
               <Text size="md">1、主要负责移动端开发、小程序开发。</Text>
               <Text size="md">2、维护 pc 端后台管理系统。</Text>
             </Flex>
