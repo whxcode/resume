@@ -11,6 +11,7 @@ import {
 import Page1 from "./pages/Page1";
 import Page2 from "./pages/Page2";
 import Page3 from "./pages/Page3";
+import Page4 from "./pages/Page4";
 import { useState } from "react";
 
 const theme = createTheme({
@@ -23,12 +24,13 @@ function App() {
   return (
     <MantineProvider defaultColorScheme="light" theme={theme}>
       <Flex justify="center">
-        <Tabs defaultValue="page-3">
+        <Tabs defaultValue="page-4">
           {visible && (
             <Tabs.List>
               <Tabs.Tab value="page-1">模版1</Tabs.Tab>
               <Tabs.Tab value="page-2">模版2</Tabs.Tab>
               <Tabs.Tab value="page-3">模版3</Tabs.Tab>
+              <Tabs.Tab value="page-4">模版4</Tabs.Tab>
             </Tabs.List>
           )}
 
@@ -42,6 +44,10 @@ function App() {
 
           <Tabs.Panel value="page-3">
             <Page3 />
+          </Tabs.Panel>
+
+          <Tabs.Panel value="page-4">
+            <Page4 />
           </Tabs.Panel>
         </Tabs>
         {visible && (

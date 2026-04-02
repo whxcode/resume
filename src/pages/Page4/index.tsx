@@ -2,7 +2,7 @@ import { Text, Flex, Title, Center, Space } from "@mantine/core";
 import root from "./index.module.scss";
 import { Divider, Icon, Link } from "../../components";
 
-function Page3() {
+function Page4() {
   return (
     <Flex className={root.container} direction="column" gap={16}>
       <Flex direction="column">
@@ -31,8 +31,8 @@ function Page3() {
                 const to = "35129760@qq.com";
                 const cc = "";
                 const bcc = "";
-                const subject = "[公司名称]-面试邀请：前端/C++开发工程师";
-                const body = `您好，现邀请您面试前端/C++开发工程师职位。烦请告知近期方便的时间，联系电话：[0000-0000]，感谢配合，静候回复！`;
+                const subject = "[公司名称]-面试邀请：高级前端开发工程师";
+                const body = `您好，现邀请您面试高级前端开发工程师职位。烦请告知近期方便的时间，联系电话：[0000-0000]，感谢配合，静候回复！`;
 
                 const params = new URLSearchParams({
                   subject: subject,
@@ -61,7 +61,7 @@ function Page3() {
           >
             6 年工作经验
             <Space w="xs" />|<Space w="xs" />
-            求职意向：前端开发工程师 (C++ / WebAssembly 方向)
+            求职意向：高级前端开发工程师
             <Space w="xs" />|<Space w="xs" />
             期望城市：成都
           </Text>
@@ -73,25 +73,25 @@ function Page3() {
 
         <Flex direction="column" gap={0}>
           <Text size="md">
-            1、扎实的前端基础，熟练掌握 JavaScript、TypeScript、React、Vue 等前端技术，具备 6 年丰富的前端开发经验。
+            1、扎实的前端基础，精通 JavaScript/TypeScript，深入理解 React 生态，具备 6 年复杂业务架构与开发经验。
           </Text>
           <Text size="md">
-            2、熟悉 C++ 基本语法，拥有 2 年 C++ 实际业务开发经验。
+            2、擅长前端性能调优，熟练利用时间切片、虚拟列表、Web Worker 处理海量数据计算及复杂视图更新的性能瓶颈。
           </Text>
           <Text size="md">
-            3、具备图形编辑器开发经验，熟练处理图形的基础编辑等核心交互逻辑及底层数据同步。
+            3、深耕复杂 Web 应用开发，精通画布的基础编辑等核心交互逻辑与超大型应用的状态管理。
           </Text>
           <Text size="md">
-            4、注重性能调优，熟练运用时间切片技术，并能结合 C++ 与 WebAssembly 高效处理复杂的业务计算。
+            4、掌握跨端开发技术，能够使用 Electron 构建桌面级应用，具备跨进程通信、本地资源调用实战经验。
           </Text>
           <Text size="md">
-            5、独立完成 Electron 从 0 到 1 的桌面端开发，掌握 C++ Node Addon 的构建与集成。
+            5、具备跨语言开发能力，掌握 C++ 并熟悉 WebAssembly，能将底层算法编译接入前端，或封装 Node Addon。
           </Text>
           <Text size="md">
-            6、熟练使用构建工具（Vite、Webpack），熟悉 Linux 基础命令，日常开发环境基于 Linux，掌握 Git、Node.js 等相关技术。
+            6、熟悉前端工程化与 Vite 构建工具，掌握前端模块化开发与代码规范治理。
           </Text>
           <Text size="md">
-            7、保持对新技术的学习热情，具备极强的责任心，能高效利用 AI 工具辅助开发与需求拆解。
+            7、自我驱动力强，极具技术热情，善于利用 AI 工具辅助开发，提升编码与重构效率。
           </Text>
         </Flex>
       </Flex>
@@ -107,7 +107,7 @@ function Page3() {
                   成都摹客科技有限公司
                 </Title>
                 <Text flex={1} size="md">
-                  前端 / C++开发工程师
+                  前端开发工程师
                 </Text>
               </Flex>
               <Text size="md"> 2021.03-至今</Text>
@@ -115,16 +115,19 @@ function Page3() {
 
             <Flex direction="column" gap={0}>
               <Text size="md">
-                负责公司核心产品 DT、M3、FG 的开发与维护 (主要技术栈为 React、TypeScript、C++、WebAssembly、Electron)。
+                负责公司大型在线设计协同产品 DT、M3 及 AI 图表产品 FG 的架构演进与业务迭代 (React + TS + C++ + Electron)。
               </Text>
               <Text size="md">
-                1、负责设计工具前端视图层及底层 C++ 业务逻辑的日常开发与维护。
+                1、负责设计工具前端视图层、核心画布交互及复杂 UI 组件的开发与重构。
               </Text>
               <Text size="md">
-                2、实现并优化编辑器内的图形交互功能（如图形的基础编辑、高频侦测对齐等）。
+                2、主导前端性能优化专项，解决海量节点卡顿、高频操作延迟等痛点。
               </Text>
               <Text size="md">
-                3、使用 WebAssembly 将 C++ 逻辑编译并接入前端环境，解决复杂交互场景下的性能瓶颈。
+                3、负责前端基建，包括组件库封装、状态管理优化及快捷键系统设计。
+              </Text>
+              <Text size="md">
+                4、主导 M3 离线版的 Electron 客户端从 0 到 1 开发与底层通信互联。
               </Text>
             </Flex>
           </Flex>
@@ -144,9 +147,10 @@ function Page3() {
 
             <Flex direction="column" gap={0}>
               <Text size="md">
-                负责公司前端产品开发与维护。
+                负责公司多端前端产品线的设计与研发 (Vue + Uni-app + 小程序)。
               </Text>
-              <Text size="md">1、主要负责移动端、小程序开发，以及 PC 后台管理系统的维护。</Text>
+              <Text size="md">1、主导移动端 H5 混合应用及微信小程序的开发与发布流程。</Text>
+              <Text size="md">2、负责复杂中后台管理系统的搭建、迭代及权限体系设计。</Text>
             </Flex>
           </Flex>
         </Flex>
@@ -161,7 +165,7 @@ function Page3() {
               <Link href="https://www.mockplus.cn/m3">
                 <Icon type="link"></Icon>
                 <Title order={5}>
-                  一、摹客M3 (矢量图形设计工具)
+                  一、摹客M3 (大型在线矢量设计工具)
                 </Title>
               </Link>
             </Flex>
@@ -175,7 +179,7 @@ function Page3() {
               </Title>
 
               <Text size="md">
-                为设计师提供的专业 UI 设计工具，支持矢量设计、实时协同、资源复用、快速编辑等特性。
+                一款专业级 UI 设计工具，涵盖复杂的矢量编辑、图层渲染管理、多人实时协同及大型设计资产维护。
               </Text>
             </Flex>
 
@@ -184,12 +188,20 @@ function Page3() {
                 核心贡献：
               </Title>
               <Flex direction="column" gap={6}>
-                <Text size="md">1、参与编辑器底层 C++ 业务模块的开发，负责图形图层的基础编辑等核心交互逻辑。</Text>
                 <Text size="md">
-                  2、负责开发图层侦测对齐功能，并在计算密集场景下深入进行性能优化。
+                  1、主导核心交互开发：负责图形的基础编辑等高频实时交互逻辑。
                 </Text>
                 <Text size="md">
-                  3、深度应用 C++ 提供的高效数据结构，有效解决复杂业务场景下的性能瓶颈。
+                  2、深度性能调优：针对万级节点数据源，采用虚拟列表、数据模型复用及事件节流，大幅降低操作延迟。
+                </Text>
+                <Text size="md">
+                  3、架构融合与调度：结合 React 时间切片与底层 C++ / Wasm 数据结构，实现复杂计算的平滑降级，确保交互流畅。
+                </Text>
+                <Text size="md">
+                  4、解析第三方工具源文件（如 Sketch、Figma、XD），实现设计资产平滑导入与格式转换。
+                </Text>
+                <Text size="md">
+                  5、基础组件与基建：封装高复用 Tree、Menu 等复杂组件，设计统一的快捷键调度中心，提升研发效能。
                 </Text>
               </Flex>
             </Flex>
@@ -202,7 +214,7 @@ function Page3() {
               <Link href="https://www.mockplus.cn/m3/offline">
                 <Icon type="link"></Icon>
                 <Title order={5}>
-                  二、 摹客 M3 离线版
+                  二、 摹客 M3 离线桌面版
                 </Title>
               </Link>
             </Flex>
@@ -216,7 +228,7 @@ function Page3() {
               </Title>
 
               <Text size="md">
-                离线版产品设计工具，数据更安全。可同时适配 Linux、Mac、Windows。
+                基于 Electron 打造的跨平台独立桌面应用，提供断网可用、高保密级别、系统级深层整合的设计体验。
               </Text>
             </Flex>
 
@@ -226,13 +238,53 @@ function Page3() {
               </Title>
               <Flex direction="column" gap={6}>
                 <Text size="md">
-                  1、独立完成 Electron 桌面端从 0 到 1 的架构搭建与开发，实现窗口管理、本地资源访问等核心功能。
+                  1、从 0 到 1 搭建 Electron 架构，负责主进程与渲染进程的 IPC 通信设计。
                 </Text>
                 <Text size="md">
-                  2、负责构建与配置 C++ Node Addon (.node扩展)，将核心渲染模块打包并集成至 Electron 环境中运行。
+                  2、主导 C++ Node Addon 的集成，实现桌面端与底层 C++ 引擎的高效互通。
                 </Text>
                 <Text size="md">
-                  3、基于 Koa 开发本地后端服务，设计数据本地存储方案，确保无网络时工具正常运行。
+                  3、基于 Koa 搭建本地后端服务，设计离线环境下的数据持久化及安全存储方案。
+                </Text>
+              </Flex>
+            </Flex>
+          </Flex>
+        </Flex>
+
+        <Flex direction="column" gap={10}>
+          <Flex justify="space-between">
+            <Flex>
+              <Link href="https://www.fluig.cn/">
+                <Icon type="link"></Icon>
+                <Title order={5}>
+                  三、 摹客 FG (AI 原生图表工具)
+                </Title>
+              </Link>
+            </Flex>
+            <Text size="md"> 2024-至今</Text>
+          </Flex>
+
+          <Flex direction="column" gap={8}>
+            <Flex direction="column" gap={6}>
+              <Title style={{ width: 280 }} order={6}>
+                内容:
+              </Title>
+
+              <Text size="md">
+                一款集成了大模型能力的效率工具，支持对话生成思维导图、流程图及白板协作。
+              </Text>
+            </Flex>
+
+            <Flex direction="column" gap={0}>
+              <Title style={{ width: 280 }} order={6}>
+                核心贡献：
+              </Title>
+              <Flex direction="column" gap={6}>
+                <Text size="md">
+                  1、架构复用设计：复用 M3 底层数据引擎，降低重复开发成本，保证双端一致性。
+                </Text>
+                <Text size="md">
+                  2、白板核心交互：开发画笔标注、思维导图节点无限拓展等高自由度白板特有功能。
                 </Text>
               </Flex>
             </Flex>
@@ -274,4 +326,4 @@ function Page3() {
   );
 }
 
-export default Page3;
+export default Page4;
